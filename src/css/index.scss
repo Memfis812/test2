@@ -1,0 +1,356 @@
+$font-size: 10px;
+$font: 'Roboto', sans-serif;
+$borderColorAndSize: 0.1rem solid #eff0f2;
+$shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+$whiteColor: #fcfdfd;
+$redColor: #fe3365;
+$greyColor: rgba(185, 185, 185, 0.747);
+$violetColor: #383448;
+$lightGreenColor: #98aba9;
+
+html {
+  font-size: $font-size;
+  font-family: $font;
+  background-color: $whiteColor;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1024px;
+  position: relative;
+}
+
+//header
+
+header {
+  background-color: $violetColor;
+
+  .logo {
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: $greyColor;
+    display: inline-block;
+  }
+}
+
+//over header
+
+//tool
+
+.tool-bar {
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  background-color: #1e2431;
+  user-select: none;
+
+  input {
+    display: inline-block;
+    width: 25rem;
+    margin-right: 2rem;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    background-color: $violetColor;
+    border: 0.1rem solid $violetColor;
+    color: $greyColor;
+    vertical-align: bottom;
+    font-style: italic;
+  }
+
+  span {
+    font-size: 2rem;
+    display: inline-block;
+    color: $greyColor;
+    padding: 1.1rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    background-color: $violetColor;
+    border-radius: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  span:hover {
+    background-color: $redColor;
+    color: $whiteColor;
+  }
+}
+
+//table
+
+table {
+  width: 100%;
+  user-select: none;
+
+  .avatar {
+    width: 100%;
+    height: auto;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: middle;
+    border: $borderColorAndSize;
+    padding: 1rem;
+    color: #98aba9;
+  }
+
+  th {
+    background-color: $whiteColor;
+    font-weight: 300;
+  }
+
+  .image-td {
+    width: 6%;
+  }
+
+  .sort span {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0.5rem;
+    border: 0.1rem solid $redColor;
+    color: $redColor;
+  }
+
+  thead th {
+    position: relative;
+  }
+  
+  thead th span {
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 0.9rem;
+    vertical-align: middle;
+    cursor: pointer;
+    color: $redColor;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+
+  .row-info {
+    cursor: pointer;
+  }
+  
+  .row-info-active {
+    background-color: $violetColor !important;
+  }
+  
+  .row-info-active td {
+    border: 0.1rem solid $violetColor;
+    color: $greyColor;
+  }
+}
+
+//modal
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  user-select: none;
+
+  .modal-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .modal {
+    padding: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    display: inline-block;
+    z-index: 2000;
+    box-shadow: $shadow;
+    background: $whiteColor;
+
+    .modal-image {
+      padding: 2rem;
+
+      .avatar {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .modal-form {
+      margin-top: 1rem;
+  
+      .input-block {
+        padding-top: 1rem;
+      }
+  
+      .position-block,
+      .date-block {
+        position: relative;
+      }
+
+      .position-select-btn,
+      .date-select-btn {
+        display: block;
+        font-size: 1.6rem;
+        color: $greyColor;
+        background-color: $violetColor;
+        margin: 0;
+        padding: 1.05rem 0.5rem 1.05rem 0.5rem;
+        border-radius: 0;
+        width: 15%;
+        cursor: pointer;
+      }
+
+      .position-select-btn:hover,
+      .date-select-btn:hover {
+        background-color: $redColor;
+        color: $whiteColor;
+      }
+  
+      #name-input,
+      #city-input,
+      #surname-input,
+      #street-input,
+      #date-input,
+      #house-input,
+      #position-input,
+      #room-input {
+        display: block;
+        width: 90%;
+        padding: 1.2rem;
+        font-size: 1rem;
+        border: 0.1rem solid $lightGreenColor;
+        color: $lightGreenColor;
+      }
+  
+      #date-input,
+      #position-input {
+        width: 83%;
+        padding-left: 1rem;
+      }
+
+      .remoteWork-block {
+        text-align: left;
+      }
+
+      .select-position {
+        position: absolute;
+        display: none;
+        top: 4.8rem;
+        left: 0px;
+        padding-left: 2rem;
+        width: 84.4%;
+      
+        li {
+          text-align: left;
+          padding: 1.2rem;
+          background-color: $violetColor;
+          color: $whiteColor;
+          border-bottom: 0.1rem solid $greyColor;
+          color: $greyColor;
+          cursor: pointer;
+        }
+      
+        li:last-child {
+          border: none;
+        }
+      
+        li:hover {
+          background-color: $redColor;
+          color: $whiteColor;
+        }
+      }
+      
+      .select-position-active {
+        display: block;
+      }
+
+      .buttons {
+        margin-top: 2rem;
+      
+        .save-btn,
+        .exit-btn,
+        .reset-btn {
+          padding: 1.5rem 3rem 1.5rem 3rem;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          color: $greyColor;
+          background-color: $violetColor;
+        }
+      
+        .save-btn:focus,
+        .exit-btn:focus,
+        .reset-btn:focus {
+          outline: none;
+        }
+      }
+
+      //calendar
+      .calendar {
+        font-size: 1.5rem;
+        position: absolute;
+        background-color: $violetColor;
+        user-select: none;
+        box-shadow: $shadow;
+        font-weight: 300;
+        z-index: 9999;
+        width: 84.4%;
+
+        th {
+          font-size: 1rem;
+          padding: 1rem;
+          border: none;
+        }
+
+        td {
+          font-size: 1rem;
+          border: none;
+          text-align: center;
+        }
+
+        td:hover {
+          cursor: pointer;
+        }
+
+        .calendar-header {
+          color: $redColor;
+          text-align: center;
+          padding: 1rem;
+
+          span {
+            margin: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+      //over calendar
+    }
+  }
+}
+
+.cover-active {
+  display: block;
+}
+
+//over modal
+

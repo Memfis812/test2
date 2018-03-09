@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <script src="js/index.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="logo">SPEC</h1>
+    </header>
+    <main>
+      <div class="tool-bar">
+        <input type="search" class="search" placeholder="поиск по фамилии...">
+        <span class="lnr lnr-magnifier search-row-info" title="Поиск"></span>
+        <span class="lnr lnr-cross search-reset" title="Очистить поиск"></span>
+        <span class="lnr lnr-file-add add-row-info" title="добавить"></span>
+        <span class="lnr lnr-pencil redact-row-info" title="Редактировать"></span>
+        <span class="lnr lnr-trash remove-row-info" title="Удалить"></span>
+      </div>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Превью</th>
+              <th>Имя<span class="lnr lnr-move resize-btn"></span></th>
+              <th>Фамилия<span class="lnr lnr-move resize-btn"></span></th>
+              <th>Дата рождения<span class="lnr lnr-move resize-btn"></span></th>
+              <th>Возраст<span class="lnr lnr-move resize-btn"></span></th>
+              <th>Должность<span class="lnr lnr-move resize-btn"></span></th>
+              <th>Удаленная работа<span class="lnr lnr-move resize-btn"></span></th>
+              <th>Адрес проживания</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td class="sort"><span class="lnr lnr-chevron-down sort-name"></span></td>
+              <td class="sort"><span class="lnr lnr-chevron-down sort-surname"></span></td>
+              <td ></td>
+              <td class="sort"><span class="lnr lnr-chevron-down sort-age"></span></td>
+              <td class="sort"><span class="lnr lnr-chevron-down sort-position"></span></td>
+              <td class="sort"><span class="lnr lnr-chevron-down sort-remote-work"></span></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <div class="cover">
+    <div class="modal-table">
+      <div class="modal-cell">
+        <div class="modal">
+          <div class="row">
+            <div class="modal-image col-3">
+              <img src="/img/avatar.jpg" alt="avatar" class="avatar">
+            </div>
+            <div class="modal-form col-9">
+              <form action="#" method="#" name="specialist">
+                <div class="row">
+                  <div class="col-6 input-block">
+                    <input type="text" name="name" placeholder="Имя" id="name-input" title="Введите имя без пробелов">
+                  </div>
+                  <div class="col-6 input-block">
+                    <input type="text" name="city" placeholder="Город" id="city-input" title="Введите название города без пробелов">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 input-block">
+                    <input type="text" name="surname" placeholder="Фамилия" id="surname-input" title="Введите фамилию без пробелов">
+                  </div>
+                  <div class="col-6 input-block">
+                    <input type="text" name="street" placeholder="Улица / Проспект" id="street-input" title="Введите название улицы без пробелов">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 input-block date-block">
+                    <div class="row">
+                      <input type="text" name="date" placeholder="чч.мм.гггг" id="date-input" class="col-10" title="Введите дату в формате чч.мм.ггг">
+                      <span class="lnr lnr-calendar-full col-2 date-select-btn"></span>
+                    </div>
+                  </div>
+                  <div class="col-6 input-block">
+                    <input type="text " name="house" placeholder="Дом" id="house-input" title="Введите номер дома без пробелов">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 input-block position-block">
+                    <div class="row">
+                      <input type="text" name="position" placeholder="Должность" id="position-input" class="col-10" title="Введите должность без пробелов">
+                      <span class="lnr lnr-chevron-down col-2 position-select-btn"></span>
+                      <ul class="select-position">
+                        <li>Программист</li>
+                        <li>Техник</li>
+                        <li>Бухгалтер</li>
+                        <li>Юрист</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 input-block">
+                    <input type="text" name="room" placeholder="Квартира" id="room-input" title="Введите номер квартиры без пробелов">>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3 input-block remoteWork-block">
+                    <input type="checkbox" name="remoteWork" id="remote-work-input">
+                    <label for="remoteWork-input">Удаленная работа</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="buttons col-12">
+                    <button type="reset" class="reset-btn">Очистить</button>
+                    <button type="button" class="save-btn">Сохранить</button>
+                    <button type="reset" class="exit-btn">Выйти</button>
+                  </div>
+                </div>
+              </form>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
